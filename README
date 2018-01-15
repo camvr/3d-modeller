@@ -1,0 +1,47 @@
+3D MODELLER
+
+A basic 3D modelling application that allows the user to create and model, subdivide, import and export quad-based meshes.
+
+ABOUT
+
+This is the final project for SFWR ENG 3GC3 at McMaster University.
+
+The developer team is as follows:
+- Cameron Van Ravens
+- Nathan Coit
+- Tommy Tran
+- Alex Trudeau
+
+
+BASIC USAGE:
+
+- Create a basic cube or sphere by clicking on the cube or sphere icon on the top left tool bar. If you
+need more vertices to model with then click on the grid icon to subdivide the mesh.
+
+- The tools work by clicking and dragging with the left mouse button. The resultant movement is a little bit weird,
+as other issues took up the time for implementing movement parallel to the view plane. Dragging the mouse vertically will
+have affect in the Y-axis, whereas moving horizontally will have affect along the X/Z axis, dependent on the viewing angle.
+
+- The tool movement can be locked to only move along a certain axis by pressing the corresponding key (x, y or z). A prompt
+will show on the screen which axis is locked.
+
+- You can have multiple objects in a scene. However, the object must be selected (using the selection tool) in order to have
+any actions apply to it (i.e. saving, moving, sculpting, deleting, etc.). The selected object has a red outline along its edges.
+
+- The camera is rotated with the right mouse button, and if you hold "shift" and the use the right mouse button, you can pan
+the world view. The scroll wheel will zoom in and out.
+
+- The middle click menu has extra options such as material selection, tool selection, and tool radius.
+
+
+NOTES ABOUT THIS SOFTWARE:
+
+- When saving or loading to or from a file, the program expects the file name to be entered in on 
+the command line (including the .obj file extension). This takes over the main thread of the program
+and if you attempt to do anything with the window the program will crash.
+
+- Selection of multiple vertices can be a bit glitchy with higher subdivisions. This fixed (sort of) by lowering
+the tool selection radius in the middle-click menu.
+
+- Face normals are used solely due too strange issues where vertex normal calculations would only work on windows,
+but not on Linux or Mac. We could not come up with a solution due to time constraints.
